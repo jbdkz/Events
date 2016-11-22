@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-    get '/events' => 'events#index'
- 
+   get '/' => 'events#home' 
+   get '/index' => 'events#index'
+    
 
 
   # The priority is based upon order of creation: first created -> highest priority.
