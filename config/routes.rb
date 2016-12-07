@@ -2,7 +2,8 @@ Rails.application.routes.draw do
    get '/' => 'events#home' 
    get '/index' => 'events#index'
     
-
+   get '/index/new' => 'events#new'
+   post '/events' => 'events#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
