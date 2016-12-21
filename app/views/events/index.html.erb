@@ -1,5 +1,5 @@
 <h1>Events</h1>
-
+<%= link_to "New Event", "events/new" %><br><%= link_to "Back","/" %><br><br>
 <table border="1">
  <tr>
   <th>ID</th>
@@ -18,9 +18,11 @@
    <td><%= t.start_date %></td>
    <td><%= t.end_date %></td>
    <td><%= t.description %></td>
+   <td><%= link_to 'Show', event_path(t) %></td>
+   <td><%= link_to 'Edit', edit_event_path(t) %></td>
   </tr> 
  <% end %>
 </table><br>
-<%= link_to "New Event", "index/new" %><br><br>
 
-<%= link_to "Back", "/" %>
+
+

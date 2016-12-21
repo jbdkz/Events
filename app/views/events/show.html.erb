@@ -1,0 +1,25 @@
+<h1>Show</h1>
+
+<table border="1">
+ <tr>
+  <th>ID</th>
+  <th>Event</th>
+  <th>Venue</th>
+  <th>Start Time</th>
+  <th>End Time</th>
+  <th>Description</th> 
+</tr> 
+
+  <tr>
+   <td><%= @event.id %></td>
+   <td><%= @event.event %></td>
+   <td><%= @event.venue %></td>
+   <td><%= @event.start_date %></td>
+   <td><%= @event.end_date %></td>
+   <td><%= @event.description %></td>
+  </tr> 
+
+</table><br>
+
+
+<%= link_to "Back", "/events" %>

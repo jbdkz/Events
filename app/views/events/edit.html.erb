@@ -1,0 +1,26 @@
+<h1>Edit Event</h1>
+<%= link_to "Back","/events" %><br><br>
+<table border="1">
+ <tr>
+  <th>Event</th>
+  <th>Venue</th>
+  <th>Start Time</th>
+  <th>End Time</th>
+  <th>Description</th> 
+</tr> 
+
+   
+   <tr>
+  <%= form_for @event, url: event_path do |t| %> 
+    <td><%= t.text_field :event, :value => @event.event %></td>
+    <td><%= t.text_field :venue, :value => @event.venue %></td>
+    <td><%= t.date_field :start_date, :value => @event.start_date %></td>
+    <td><%= t.date_field :end_date, :value => @event.end_date %></td>
+    <td><%= t.text_area :description, :value => @event.description %></td> 
+   </tr>
+</table><br> 
+  <%= t.submit %><br><br>
+  <% end %>
+ 
+
+

@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
-   get '/' => 'events#home' 
-   get '/index' => 'events#index'
+
+ # resources :events
+    get '/' => 'events#home'
+    get '/events' => 'events#index'
+    post '/events' => 'events#create'
+    get '/events/new' => 'events#new', as: :'new_event'
+    get '/events/:id/edit' => 'events#edit', as: :'edit_event'
+    get '/events/:id' => 'events#show', as: :'event' 
+    patch '/events/:id' => 'events#update'
+    put '/events/:id' => 'events#update'
+    delete '/events/:id' => 'events#destroy'
+
+
+ #  get '/' => 'events#home' 
+ #  get '/events' => 'events#index'
     
-   get '/index/new' => 'events#new'
-   post '/events' => 'events#create'
+ #  get '/events/new' => 'events#new'
+ #  post '/events' => 'events#create'
+
+ #  get '/events/:id/edit' => 'events#edit'
+ #  patch '/events/:id' => 'events#update'
+   
+  # get '/events/:id' => 'events#show'   
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
