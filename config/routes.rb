@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
  # resources :events
-    get '/' => 'events#home'
-    get '/events' => 'events#index'
-    post '/events' => 'events#create'
-    get '/events/new' => 'events#new', as: :'new_event'
-    get '/events/:id/edit' => 'events#edit', as: :'edit_event'
-    get '/events/:id' => 'events#show', as: :'event' 
-    patch '/events/:id' => 'events#update'
-    put '/events/:id' => 'events#update'
-    delete '/events/:id' => 'events#destroy'
+ get '/' => 'events#home'
+ get '/events' => 'events#index'
+ post '/events' => 'events#create'
+ get '/events/new' => 'events#new', as: :'new_event'
+ get '/events/:id/edit' => 'events#edit', as: :'edit_event'
+ get '/events/:id' => 'events#show', as: :'event' 
+ patch '/events/:id' => 'events#update'
+ put '/events/:id' => 'events#update'
+ delete '/events/:id' => 'events#destroy'
 
 
  #  get '/' => 'events#home' 

@@ -16,11 +16,10 @@
     <td><%= t.text_field :venue, :value => @event.venue %></td>
     <td><%= t.date_field :start_date, :value => @event.start_date %></td>
     <td><%= t.date_field :end_date, :value => @event.end_date %></td>
-    <td><%= t.text_area :description, :value => @event.description %></td>
-    <td><%= t.submit "Upate" %>
+    <td><%= t.text_area :description, :value => @event.description %></td> 
    </tr>
-</table>
- 
+</table><br> 
+  <%= t.submit "Edit" %><br><br>
   <% end %>
  
 
