@@ -1,16 +1,15 @@
 <h1>New Event</h1>
 <%= link_to "Back","/events" %><br><br>
-<table border="1">
- <tr>
-  <th>Event</th>
-  <th>Venue</th>
-  <th>Start Time</th>
-  <th>End Time</th>
-  <th>Description</th> 
-</tr> 
-
- <%= form_for(@event) do |t| %>
-   <tr>
+<%= form_for(@event) do |t| %>
+ <table>
+  <tr>
+    <th>Event</th>
+    <th>Venue</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Description</th>          
+   </tr> 
+   <tr> 
     <td><%= t.text_field :event %></td>
     <td><%= t.text_field :venue %></td>
     <td><%= t.date_field :start_date %></td>
@@ -18,8 +17,7 @@
     <td><%= t.text_area :description %></td>
     <td><%= t.submit "Create" %></td>
    </tr>
-</table><br>
-
- <% end %>
+ </table>
+<% end %>
 
 
